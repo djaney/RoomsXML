@@ -22,15 +22,23 @@ use JMS\Serializer\Annotation\XmlRoot;
  */
 class Booking
 {
+
     /**
-     * @var booking creation date
+     * @var string
+     * @Type(name="string")
+     * @SerializedName("Id")
+     */
+    protected $id;
+
+    /**
+     * @var \DateTime booking creation date
      * @Type(name="DateTime<'Y-m-d'>")
      * @SerializedName("CreationDate")
      */
     protected $CreationDate;
 
     /**
-     * @var hotel booking details 
+     * @var HotelBooking hotel booking details
      * @SerializedName("HotelBooking")
      * @XmlList(inline=true,entry="HotelBooking")
      * @XmlElement(cdata=false)
@@ -40,8 +48,24 @@ class Booking
     protected $HotelBooking;
 
     /**
-     * get booking creating date
-     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param string $id
+     * @return Booking
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
      * @return \DateTime
      */
     public function getCreationDate()
@@ -50,19 +74,16 @@ class Booking
     }
 
     /**
-     * set booking creation date
-     *
-     * @param $CreationDate
+     * @param \DateTime $CreationDate
+     * @return Booking
      */
     public function setCreationDate($CreationDate)
     {
         $this->CreationDate = $CreationDate;
+        return $this;
     }
 
     /**
-     * Get hotel booking object
-     *
-     *
      * @return HotelBooking
      */
     public function getHotelBooking()
@@ -71,13 +92,14 @@ class Booking
     }
 
     /**
-     * HotelBooking setter
-     *
      * @param HotelBooking $HotelBooking
+     * @return Booking
      */
     public function setHotelBooking($HotelBooking)
     {
         $this->HotelBooking = $HotelBooking;
+        return $this;
     }
+
 
 }
