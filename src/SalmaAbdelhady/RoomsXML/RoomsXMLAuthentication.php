@@ -63,7 +63,7 @@ class RoomsXMLAuthentication
     /**
      * @var
      * @XmlElement(cdata=false)
-     * @Type(name="string")
+     * @Type(name="boolean")
      * @SerializedName("DebugMode")
      */
     private $debugMode;

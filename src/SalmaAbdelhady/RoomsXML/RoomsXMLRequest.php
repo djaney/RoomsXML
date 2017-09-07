@@ -25,8 +25,17 @@ use SalmaAbdelhady\RoomsXML\Model\Error;
  */
 class RoomsXMLRequest
 {
+    /**
+     * @var @Serializer\Exclude()
+     */
     protected $config;
+    /**
+     * @var @Serializer\Exclude()
+     */
     protected $apiURL;
+    /**
+     * @var @Serializer\Exclude()
+     */
     protected $auth;
 
     public $operationData;
