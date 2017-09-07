@@ -12,6 +12,7 @@ namespace SalmaAbdelhady\RoomsXML;
 use Buzz\Browser;
 use Buzz\Client\Curl;
 use Buzz\Message\Response;
+use JMS\Serializer\Annotation\Exclude;
 use JMS\Serializer\Annotation\SerializedName;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\XmlElement;
@@ -26,15 +27,15 @@ use SalmaAbdelhady\RoomsXML\Model\Error;
 class RoomsXMLRequest
 {
     /**
-     * @var @Serializer\Exclude()
+     * @var @Exclude()
      */
     protected $config;
     /**
-     * @var @Serializer\Exclude()
+     * @var @Exclude()
      */
     protected $apiURL;
     /**
-     * @var @Serializer\Exclude()
+     * @var @Exclude()
      */
     protected $auth;
 

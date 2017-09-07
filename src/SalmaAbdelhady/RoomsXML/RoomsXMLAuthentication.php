@@ -70,7 +70,7 @@ class RoomsXMLAuthentication
     /**
      * @var
      * @XmlElement(cdata=false)
-     * @Type(name="string")
+     * @Type(name="boolean")
      * @SerializedName("TestMode")
      */
     private $testMode;
